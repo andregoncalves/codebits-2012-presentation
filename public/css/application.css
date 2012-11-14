@@ -1,0 +1,9 @@
+html { background: #FFF }
+body { margin: 2em auto; max-width: 600px; }
+
+ul { margin: 2em auto; }
+li { margin: .5em 0 }
+li input[type=checkbox] { margin-right: .25em; vertical-align: top; }
+li.done-true { text-decoration: line-through; }
+
+input.ng-invalid { background: #dc5151; color: #FFF }

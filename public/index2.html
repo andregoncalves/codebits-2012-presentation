@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todo">
+  <head>
+    <meta charset="utf-8">
+    <title>Codebits Angular TODO - #1</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/application.css">
+    <script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/application.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body class="well" ng-controller="AppCtrl">
+    <h1>{{title}} TODO list</h1>
+
+    <p>
+      Remaining <strong>4</strong> of <strong>5</strong>.
+      [ <a>archive</a> ]
+    </p>
+
+    <ul class="unstyled">
+      <li ng-repeat="item in items"><input type="checkbox" class="input"> {{item.text}} <b>{{item.done}}</b></li>
+    </ul>
+    
+    <ul class="unstyled">
+      <li ng-repeat="item in items"><input type="checkbox" class="input" ng-model="item.done"> {{item.text}} <b>{{item.done}}</b></li>
+    </ul>
+
+    <ul class="unstyled">
+      <li class="done-{{item.done}}" ng-repeat="item in items"><input type="checkbox" class="input" ng-model="item.done"> {{item.text}} </li>
+    </ul>
+
+    <form class="form-inline">
+      <input type="text">
+      <button class="btn btn-primary">add</button>
+    </form>
+    
+  </body>
+</html>

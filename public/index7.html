@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todo">
+  <head>
+    <meta charset="utf-8">
+    <title>Codebits Angular TODO - #1</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/application.css">
+    <script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/angular-resource.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/application.js" type="text/javascript" charset="utf-8"></script>
+    
+  </head>
+  <body class="well" ng-controller="AppCtrl">
+    <h1>{{title}} TODO list</h1>
+
+    <p>
+      Remaining <strong>{{remaining()}}</strong> of <strong>{{items.length}}</strong>.
+      [ <a ng-click="archive()">archive</a> ]
+    </p>
+    
+    <task-list>
+      <task ng-repeat="item in items"></task>
+    </task-list>
+    
+    <form name="newItemForm" class="form-inline">
+      <input name="newItemText" type="text" ng-model="newItem.text" ng-maxlength="10">
+      <button class="btn btn-primary" ng-click="addItem()" ng-disabled="!newItem.text">add</button>
+      <div ng-show="newItemForm.newItemText.$error.maxlength">Text too long</div>
+    </form>
+    
+  </body>
+</html>

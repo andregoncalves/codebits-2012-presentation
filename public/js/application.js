@@ -1,3 +1,12 @@
+
+
+
+
+
+
+
+
+
 /*var app = angular.module('todo', []);*/
 
 /*
@@ -239,6 +248,7 @@ app.directive('task', function() {
 });
 */
 
+/*
 var app = angular.module('todo', ['ngResource']);
 
 app.controller('AppCtrl', function($scope, Item) {
@@ -323,3 +333,4 @@ app.directive('task', function() {
                '</li>'
   }
 });
+*/
